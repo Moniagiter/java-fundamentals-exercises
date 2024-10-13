@@ -1,14 +1,15 @@
 package com.bobocode.intro;
 
-import com.bobocode.util.ExerciseNotCompletedException;
+//mport com.bobocode.util.ExerciseNotCompletedException;
 
+import java.util.Base64;
 /**
  * Welcome! This is an introduction exercise that will show you a simple example of Bobocode exercises.
  * <p>
  * JavaDoc is a way of communication with other devs. We use Java Docs in every exercise to define the task.
  * So PLEASE MAKE SURE you read the Java Docs carefully.
  * <p>
- * Every exercise is covered with tests, see {@link ExerciseIntroductionTest}.
+ * Every exercise is covered with tests, see {*@link ExerciseIntroductionTest}.
  * <p>
  * In this repo you'll find dozens of exercises covering various fundamental topics.
  * They all have the same structure helping you to focus on practice and build strong skills!
@@ -23,8 +24,7 @@ public class ExerciseIntroduction {
      * @return "The key to efficient learning is practice!"
      */
     public String getWelcomeMessage() {
-        // todo: implement a method and return a message according to javadoc
-        throw new ExerciseNotCompletedException(); 
+        return "The key to efficient learning is practice!";
     }
 
     /**
@@ -38,8 +38,9 @@ public class ExerciseIntroduction {
      * @param message input message
      * @return encoded message
      */
+
     public String encodeMessage(String message) {
-        // todo: switch to branch "completed" in order to see how it should be implemented
-        throw new ExerciseNotCompletedException();
+        return Base64.getEncoder().encodeToString(message.getBytes());
+        //throw new ExerciseNotCompletedException();
     }
 }
